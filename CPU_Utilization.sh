@@ -47,3 +47,19 @@ echo "##########################################################################
 fi 
 
 #######################################################################################
+
+### EXPLAINATION ###
+
+# This script checks the CPU usage and alerts if it exceeds 50%.
+
+# 1. Get CPU usage:  
+#    The `top -bn1` command gives CPU stats, and `awk` extracts the percentage of CPU that's in use (100% - idle).
+
+# 2. Compare usage:  
+#    It checks if the CPU usage is greater than 50% using `bc` for the comparison.
+
+# 3. Output:  
+#    - If usage is over 50%, it prints "CPU Overload".
+#    - Otherwise, it prints "CPU is running normally".
+
+#######################################################################################
